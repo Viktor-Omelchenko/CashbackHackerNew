@@ -3,7 +3,6 @@ plugins {
 }
 
 group 'ru.netology'
-artifact 'ci'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -12,9 +11,12 @@ repositories {
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testImplementation 'org.testng:testng:7.1.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 
 test {
     useJUnitPlatform()
+    userTestNG()
 }
+
